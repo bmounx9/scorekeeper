@@ -1,0 +1,20 @@
+<h1>{{.DisplayTitle}}</h1>
+
+<div>
+    <a href="/edit-user/{{.Title}}">Edit</a>
+</div>
+<div>
+    <span>Title</span><br>
+    <span>{{.DisplayTitle}}</span>
+</div>
+<div>
+    <span>Description</span><br/>
+    {{if index .Metadata "description"}}
+        <span>{{index .Metadata "description"}}</span>
+    {{else}}
+        <span></span>
+    {{end}}
+</div>
+<div>
+    <a href="/">Return Home</a>
+</div>

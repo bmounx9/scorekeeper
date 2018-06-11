@@ -1,0 +1,32 @@
+<h1>{{.DisplayTitle}}</h1>
+
+<div>
+    <a href="/edit-game/{{.Title}}">Edit Game</a><br/>
+    <a href="/add-score/{{.Title}}">Add Score</a><br/>
+</div>
+<br/>
+<div>
+    <span>Title</span><br/>
+    <span>{{.DisplayTitle}}</span><br/>
+</div>
+<br/>
+<div>
+    <span>Description</span><br/>
+    {{if index .Metadata "description"}}
+        <span>{{index .Metadata "description"}}</span><br/>
+    {{else}}
+        <span></span><br/>
+    {{end}}
+</div>
+<br/>
+<div>
+    <span>Scores</span><br/>
+    {{if index .HTMLMetadata "scores"}}
+        <span>{{index .HTMLMetadata "scores"}}</span><br/>
+    {{else}}
+        <span></span><br/>
+    {{end}}
+</div>
+<div>
+    <a href="/">Return Home</a>
+</div>

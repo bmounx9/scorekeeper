@@ -1,0 +1,36 @@
+<h1>Scorekeeper</h1>
+
+<div>
+
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <ul>
+            <li>
+                <span>Games</span>
+                <ul>
+                    <li><a href="/create-game/">Create Game</a></li>
+                    <li>
+                        <span>Game List</span>
+                        <ul>
+                        {{if index .HTMLMetadata "games"}}{{index .HTMLMetadata "games"}}{{end}}
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span>Users</span>
+                <ul>
+                    <li><a href="/create-user/">Create User</a></li>
+                    <li>
+                        <span>User List</span>
+                        <ul>
+                        {{if index .HTMLMetadata "users"}}{{index .HTMLMetadata "users"}}{{end}}
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

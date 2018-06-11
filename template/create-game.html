@@ -1,0 +1,17 @@
+{{if .DisplayTitle}}<h1>Edit {{.DisplayTitle}}</h1>{{else}}<h1>Create Game</h1>{{end}}
+
+<form action="/save-game/" method="POST">
+    <div>
+        <span>Title</span><br>
+        <input type="text" name="title" value="{{.DisplayTitle}}"/>
+    </div>
+    <div>
+        <span>Description</span><br/>
+        {{if index .Metadata "description"}}
+            <textarea name="description" rows="10" cols="80">{{index .Metadata "description"}}</textarea>
+        {{else}}
+            <textarea name="description" rows="10" cols="80"></textarea>
+        {{end}}
+    </div>
+    <div><input type="submit" value="Save"></div>
+</form>
