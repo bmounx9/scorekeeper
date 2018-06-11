@@ -1,2 +1,2 @@
 # scorekeeper
-Simple scorekeeper application to learn Go!
+Simple scorekeeper application to learn Go
